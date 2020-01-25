@@ -12,28 +12,13 @@ var db = require("../models");
 // =============================================================
 module.exports = function(app) {
 
-  // GET route for getting all of the posts
-  app.get("/api/posts", function(req, res) {
+  app.get("/api/restaurants", function(req, res) {
     
   });
 
-  // Get route for retrieving a single post
-  app.get("/api/posts/:id", function(req, res) {
-    
-  });
 
   // POST route for saving a new post
-  app.post("/api/posts", function(req, res) {
-    
-  });
-
-  // DELETE route for deleting posts
-  app.delete("/api/posts/:id", function(req, res) {
-    
-  });
-
-  // PUT route for updating posts
-  app.put("/api/posts", function(req, res) {
+  app.post("/api/restaurants", function(req, res) {
     
   });
 };
