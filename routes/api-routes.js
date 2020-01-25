@@ -25,7 +25,7 @@ module.exports = function(app) {
       }
     })
       .then(function(dbRestaurant) {
-        res.json(dbRestaurants);
+        res.json(dbRestaurant);
       });
   });
 
