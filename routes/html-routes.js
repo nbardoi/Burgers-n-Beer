@@ -19,4 +19,8 @@ app.get("/", function(req, res) {
 //     res.sendFile(path.join(__dirname, "login.html"))
 //   });
 
+app.get("/display", function(req, res) {
+    res.sendFile(path.join(__dirname, "display.html"))
+  });
+
 }
