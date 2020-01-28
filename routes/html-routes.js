@@ -23,8 +23,8 @@ module.exports = function(app) {
   });
 
   // login page to add new restaurants
-  app.get("/login", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/login.html"));
+  app.get("/add", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/add.html"));
   });
 
 };
