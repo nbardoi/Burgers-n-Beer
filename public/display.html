@@ -163,7 +163,7 @@
             
       <div id="id01" class="modal">
         
-        <form class="modal-content animate" action="/action_page.php" method="post">
+        <form class="modal-content animate" action="/add" method="post">
           <div class="imgcontainer">
             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
             <img src="https://p1.liveauctioneers.com/249/27245/10294940_1_x.jpg?auto=webp&format=pjpg&version=1&width=512" alt="Avatar" class="avatar">
@@ -176,9 +176,9 @@
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="psw" required>
               
-            <button type="submit" href="/add">Login</button>
+            <button type="submit" id="login">Login</button>
             <label>
-              <input type="checkbox" checked="checked" name="remember"> Remember me
+              <input type="checkbox" checked="checked" name="remember"> Remember Me
             </label>
           </div>
       
@@ -198,6 +198,11 @@
           if (event.target == modal) {
               modal.style.display = "none";
           }
+      }
+
+      var logButton = document.getElementById('login');
+      button.onclick = function() {
+      location.assign('/add');
       }
       </script>
     <!-- modal -->
