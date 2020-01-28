@@ -21,8 +21,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <!-- <a type="button" class="btn btn-outline-dark" href="login">Add your favorite Burgers-n-Beer Restaurant!</a> -->
-            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Add your favorite Burgers-n-Beer Restaurant!</button>
+            <button onclick="document.getElementById('myModal').style.display='block'" style="width:auto;">Add your favorite Burgers-n-Beer Restaurant!</button>
           </li>
         </ul>
       </div>
@@ -163,7 +162,7 @@
             
       <div id="id01" class="modal">
         
-        <form class="modal-content animate" href="/add">
+        <form class="modal-content animate" action="/add" method="GET">
           <div class="imgcontainer">
             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
             <img src="https://p1.liveauctioneers.com/249/27245/10294940_1_x.jpg?auto=webp&format=pjpg&version=1&width=512" alt="Avatar" class="avatar">
