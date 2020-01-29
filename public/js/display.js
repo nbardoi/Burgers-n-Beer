@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var infoContainer = $(".show-info");
+    var infoContainer = $("#show-info");
     var restaurantCategorySelect = $("#category");
     restaurantCategorySelect.on("change", handleCategoryChange);
     var restaurants;
@@ -50,12 +50,16 @@ $(document).ready(function() {
       });
       var newRestCardBody = $("<div>");
       newRestCardBody.addClass("card-body");
-      var newRestBody = $("<p>");
+      var newRestBody = $("<div>");
+      var restTime = $("<p>").text("Hours: " + restaurant.time);
+      var rest_hh = $("<p>").text("Happy Hour? " + restaurant.hh);
+      var restRating = $("<p>").text("Rating: " + restaurant.rating);
+      var restReview = $("<p>").text("Top Review: " + restaurant.review);
       newRestTitle.text(restaurant.name + " ");
-      newRestBody.text(restaurant.time);
-      newRestBody.text(restaurant.hh);
-      newRestBody.text(restaurant.rating);
-      newRestBody.text(restaurant.review);
+      newRestBody.append(restTime);
+      newRestBody.append(rest_hh);
+      newRestBody.append(restRating);
+      newRestBody.append(restReview);
       
       newRestCardHeading.append(newRestTitle);
       newRestCardHeading.append(newRestCategory);
@@ -70,13 +74,13 @@ $(document).ready(function() {
       infoContainer.empty();
       var messageH2 = $("<h2>");
       messageH2.css({ "text-align": "center", "margin-top": "50px" });
-      messageH2.html("No restaurants yet for this category, navigate <a href='/login'>here</a> in order to create a new post.");
+      messageH2.html("No restaurants yet for this category, navigate <a href='add'>here</a> in order to add a new restaurant.");
       infoContainer.append(messageH2);
     }
   
     function handleCategoryChange() {
       var newRestCategory = $(this).val();
-      getRests(newRestCategory);
+      getRestaurants(newRestCategory);
     }
   
   });

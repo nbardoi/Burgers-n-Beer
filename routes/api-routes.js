@@ -11,7 +11,7 @@ var db = require("../models");
 // Routes
 // =============================================================
 module.exports = function(app) {
-  app.get("/api/restaurants", function(req, res) {
+  app.get("/api/restaurants/", function(req, res) {
     db.Restaurants.findAll({})
       .then(function(dbRestaurant) {
         res.json(dbRestaurant);

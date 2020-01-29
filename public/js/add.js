@@ -12,17 +12,17 @@ $(document).ready(function() {
     // Adding an event listener for when the form is submitted
     $(add_newForm).on("submit", function handleFormSubmit(event) {
       event.preventDefault();
-      // Wont submit the post if we are missing a body or a title
-      if (!nameInput.val().trim() || !hhInput.val().trim() || !timeInput.val().trim() || !ratingInput.val().trim() || !reviewInput.val().trim()) {
+      // Wont submit the post if we are missing info
+      if (!nameInput.val()) {
         return;
       }
       // Constructing a newRest object to hand to the database
       var newRest = {
             name: nameInput.val().trim(),
-            category: categoryInput.val(),
+            category: restCategorySelect.val(),
             time: timeInput.val().trim(),
             hh: hhInput.val(),
-            rating: ratingInput.val(),
+            rating: ratingInput.val().trim(),
             review: reviewInput.val().trim()
       };
   
@@ -32,9 +32,9 @@ $(document).ready(function() {
       
     });
   
-    // Submits a new post and brings user to blog page upon completion
+    // Submits a new post and brings user to restaurants page upon completion
     function submitRest(Rest) {
-      $.post("/api/restaurants/", Rest, function() {
+      $.post("/api/restaurants", Rest, function() {
         window.location.href = "/restaurants";
       });
     }

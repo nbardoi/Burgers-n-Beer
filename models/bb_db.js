@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    var Resturants = sequelize.define("Resturants", {
+    var Resturants = sequelize.define("Restaurants", {
       // Giving the Resturant model a name of type STRING
       name: {
         type: DataTypes.STRING,
@@ -13,8 +13,7 @@ module.exports = function(sequelize, DataTypes) {
         defaultValue: "Restaurant"
       },
       hh: {
-        type: DataTypes.BOOLEAN,
-        allowNull: true
+        type: DataTypes.TEXT,
       },
       time: {
         type: DataTypes.STRING,
@@ -24,7 +23,7 @@ module.exports = function(sequelize, DataTypes) {
         }
       },
       rating: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.TEXT,
         allowNull: false,
         validate: {
           len: [1, 10]
