@@ -16,7 +16,7 @@ $(document).ready(function() {
       if (!nameInput.val().trim() || !hhInput.val().trim() || !timeInput.val().trim() || !ratingInput.val().trim() || !reviewInput.val().trim()) {
         return;
       }
-      // Constructing a newPost object to hand to the database
+      // Constructing a newRest object to hand to the database
       var newRest = {
             name: nameInput.val().trim(),
             category: categoryInput.val(),
@@ -27,9 +27,7 @@ $(document).ready(function() {
       };
   
       console.log(newRest);
-  
-      // If we're updating a post run updatePost to update a post
-      // Otherwise run submitPost to create a whole new post
+
         submitRest(newRest);
       
     });

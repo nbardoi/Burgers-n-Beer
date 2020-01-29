@@ -1,46 +1,60 @@
 <!DOCTYPE html>
-<html lang=“en”>
+<html lang="en">
 <head>
-  <meta charset=“UTF-8">
+  <meta charset="UTF-8">
   <title>Add Form</title>
   <!-- Latest compiled and minified CSS & JS -->
-  <link href=“https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css” rel=“stylesheet”>
-  <link rel=“stylesheet” href=“css/styles.css” media=“screen” title=“no title”>
-  <script src=“https://code.jquery.com/jquery.js”></script>
-  <script src=“https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js”></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" media="screen" title="no title">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <div class=“container”>
-    <div class=“row”>
-      <div class=“row”>
-        <div class=“col-sm-2 mt-4">
-          <a class=“btn btn-light” href=“/blog”>Add your favorites!!<Form:get></Form:get></a>
+  <div class="container">
+    <div class="row">
+      <div class="row">
+        <div class="col-sm-2 mt-4">
+          <a class="btn btn-light" href="/restaurants">View our Top Picks!</a>
         </div>
       </div>
-      <div class=“col-md-5 offset-md-3”>
-        <form id=“name”>
-          <div class=“form-group”>
-            <label for=“title”>Name:</label>
-            <input type=“text” class=“form-control” id=“name”>
-            <br />
-            <label for=“body”>Review:</label>
-            <textarea class=“form-control” rows=“10" id=“category”></textarea>
-            <div class=“form-group”>
-              <label for=“category”>Rating:</label>
-              <select class=“custom-select” id=“time”>
-                <option value=“bad”>1</option>
-                <option value=“good Review”>2</option>
-                <option value=“best”>3</option>
+      <div class="col-md-5 offset-md-3">
+        <br/>
+        <form id="name">
+          <div class="form-group">
+            <label for="name"> Restaurant Name:</label>
+            <input type="text" class="form-control" id="name">
+            <br/>
+            <div class="form-group">
+            <label for="category">Select Category:</label>
+              <select class="custom-select" id="category">
+                <option value="Restaurant">Restaurant</option>
+                <option value="Brewery">Brewery</option>
+                <option value="Bar">Bar</option>
               </select>
             </div>
+            <label for="time"> Hours:</label>
+            <input type="text" class="form-control" id="time">
+            <br/>
+            <div class="form-group">
+              <label for="hh">Happy Hour?</label>
+                <select class="custom-select" id="hh">
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
+              </div>
+            <label for="rating"”> Rating:</label>
+            <input type="text" class="form-control" id="rating">
+            <br/>
+            <label for="body">Review:</label>
+            <textarea class="form-control" rows="5" id="category"></textarea>
             <br />
-            <button type=“submit” class=“btn btn-success submit btn-lg”>Submit</button>
+            <button type="submit" class="btn btn-success submit btn-lg">Submit</button>
           </div>
         </form>
       </div>
     </div>
   </div>
   <!-- Custom Script -->
-  <script src=“js/cms.js” type=“text/javascript”></script>
+  <script src="js/cms.js" type="text/javascript"></script>
 </body>
 </html>
