@@ -18,7 +18,7 @@ module.exports = function(app) {
   });
 
   // cms route loads cms.html
-  app.get("/display", function(req, res) {
+  app.get("/restaurants", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/display.html"));
   });
 
@@ -26,5 +26,10 @@ module.exports = function(app) {
   app.get("/add", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/add.html"));
   });
+
+  app.get("/contact", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/contact.html"));
+  });
+
 
 };
