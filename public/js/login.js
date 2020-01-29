@@ -3,10 +3,10 @@ var attempt = 3; // Variable to count number of attempts.
 function validate(){
 var username = document.getElementById("username").value;
 var password = document.getElementById("password").value;
-if ( username == "utsabootcamp" && password == "utsabootcamp19_20"){
-alert ("Login successfully");
-window.location = "/add"; // Redirecting to other page.
-return false;
+if ( username == "utsabootcamp" && password == "test_123"){
+alert ("Login successful");
+window.location = "add"; // Redirecting to other page.
+return true;
 }
 else{
 attempt --;// Decrementing by one.

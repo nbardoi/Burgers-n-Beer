@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +8,76 @@
   <title>add form</title>
   <link rel="stylesheet" href="../public/css/add.css">
 </head>
+
 <body>
 
   <form action="/somewhere_else" method="GET">
 
-    <input type="text" name="choice" placeholder="Please pick your poison...">
+    <h1>Add your favorites!</h1>
 
-    Burger: <input type="radio" name="choice" value="Burger">
-    Beer: <input type="radio" name="choice" value="Beer">
-    Both: <input type="radio" name="choice" value="Both">
+    <br>
+
+    Name: <input form="form" id="name" placeholder="Restaraunt Name">
+
+    <br>
+    <br>
+
+    <select class="custom-select" id="category">
+      <option value="Restaurant">Restaraunt</option>
+      <option value="Brewery">Brewery</option>
+      <option value="Bar">Bar</option>
+    </select>
+
+    <br>
+
+    <label for="happy_hour_radio">Happy Hour?</label>
+    <p>
+      <input type="radio" name="yes_no" checked>Yes</input>
+    </p>
+    <p>
+      <input type="radio" name="yes_no">No</input>
+    </p>
+
+    <br>
+
+    Time: <input form="time" name="time" placeholder="05:00">
+
+    <br>
+    <br>
+
+    <label for="rating">Rating: where 1-5 and 5 is the best</label>
+    <p>
+      <input type="radio" name="rating" checked>1</input>
+    </p>
+    <p>
+      <input type="radio" name="rating">2</input>
+    </p>
+    <p>
+      <input type="radio" name="rating">3</input>
+    </p>
+    <p>
+      <input type="radio" name="rating">4</input>
+    </p>
+    <p>
+      <input type="radio" name="rating">5</input>
+    </p>
+
+    <br>
+    Review: <textarea placeholder="Thumbs up or down?"></textarea>
+
+    <br>
 
     <input type="submit" name="submit" id="submit">
 
     <br>
-    
-    <textarea name="message" placeholder="#"></textarea>
+
+
 
   </form>
 
 
 </body>
+
+<script src="js/add.js" type="text/javascript"></script>
+
 </html>
