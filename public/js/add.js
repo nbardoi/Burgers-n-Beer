@@ -5,12 +5,12 @@ $(document).ready(function() {
 
   
     // Getting jQuery references to the post body, title, form, and category select
-    var bodyInput = $("#body");
+    var nameInput = $("#name");
     var titleInput = $("#title");
-    var cmsForm = $("#cms");
+    var add_newForm = $("#add-new");
     var postCategorySelect = $("#category");
     // Giving the postCategorySelect a default value
-    postCategorySelect.val("Personal");
+    postCategorySelect.val("Restaurant");
     // Adding an event listener for when the form is submitted
     $(cmsForm).on("submit", function handleFormSubmit(event) {
       event.preventDefault();
