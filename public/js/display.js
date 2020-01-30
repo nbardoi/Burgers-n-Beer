@@ -74,7 +74,7 @@ $(document).ready(function() {
       infoContainer.empty();
       var messageH2 = $("<h2>");
       messageH2.css({ "text-align": "center", "margin-top": "50px" });
-      messageH2.html("No restaurants yet for this category, navigate <a href='add'>here</a> in order to add a new restaurant.");
+      messageH2.html("No restaurants yet for this category, click on the button above to add a new restaurant.");
       infoContainer.append(messageH2);
     }
   

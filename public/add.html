@@ -2,20 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Add Form</title>
+  <title>Add Your Favorite!</title>
   <!-- Latest compiled and minified CSS & JS -->
   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/css/add.css">
 </head>
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="row">
-        <div class="col-sm-2 mt-4">
-          <a class="btn btn-light" href="/restaurants">View our Top Picks!</a>
-        </div>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/index"><h3>Burgers-n-Beer</h3></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="btn btn-secondary" id="rest_btn" href="/restaurants">View our Top Picks!</a>          </li>
+        </ul>
       </div>
+    </nav>
+
+      <br>
+      <br>
+      <br>
+      <br>
+
+  <div class="container" id="container">
+    <div class="row">
       <div class="col-md-5 offset-md-3">
         <br/>
         <form id="add-new">
@@ -47,7 +62,7 @@
             <label for="body">Review:</label>
             <textarea class="form-control" rows="5" id="review"></textarea>
             <br />
-            <button type="submit" class="btn btn-success submit btn-lg">Submit</button>
+            <button type="submit" id="submit_btn" class="btn btn-success submit btn-lg">Submit</button>
           </div>
         </form>
       </div>
