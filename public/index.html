@@ -10,13 +10,14 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
 </head>
 <body>
   <title>Burgers-n-Beer!</title>
   </head>
   <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="/index"><h3>Burgers-n-Beer</h3></a>
+      <a class="navbar-brand" href="/"><h3>Burgers-n-Beer</h3></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -35,6 +36,7 @@
     
     /* Full-width input fields */
     input[type=text], input[type=password] {
+      color: white;
       width: 100%;
       padding: 12px 20px;
       margin: 8px 0;
@@ -151,35 +153,52 @@
          width: 100%;
       }
     }
+
+    #uname, 
+    #psw {
+          color: white;
+    }
+    #login {
+          background-color: #4CAF50;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          cursor: pointer;
+          width: 100%;
+        }
+        
+        #login:hover {
+          opacity: 0.8;
+        }
     </style>
     <body>
   
   <h2> </h2>
         
   <div id="id01" class="modal">
-    
-    <form class="modal-content animate" action="/add" method="GET">
+        
+    <form class="modal-content animate">
       <div class="imgcontainer">
         <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
         <img src="https://p1.liveauctioneers.com/249/27245/10294940_1_x.jpg?auto=webp&format=pjpg&version=1&width=512" alt="Avatar" class="avatar">
       </div>
   
       <div class="container">
-        <label for="uname"><b>Username</b></label>
+        <label for="uname" id="uname"><b>Username</b></label>
         <input type="text" placeholder="Enter Username" name="uname" id="username" required>
   
-        <label for="psw"><b>Password</b></label>
+        <label for="psw" id="psw"><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="psw" id="password" required>
           
-        <button type="submit" id="login">Login</button>
+        <input type="button" value="Login" id="login" onclick="validate()"/>
         <label>
-          <input type="checkbox" checked="checked" name="remember"> Remember Me
-        </label>
+          <input type="checkbox" checked="checked" name="remember"> Remember Me</label>
       </div>
   
       <div class="container" style="background-color:#f1f1f1">
         <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-        <span class="psw">Forgot <a href="#">password?</a></span>
+        <span class="psw"><a href="#">Forgot password?</a></span>
       </div>
     </form>
   </div>
@@ -301,6 +320,7 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+  <script src="js/login.js"></script>
 
   </body>
 </html>
