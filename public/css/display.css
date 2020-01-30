@@ -2,6 +2,7 @@
     width: 100%;
     margin: 0;
     padding: 10px;
+    background-color: #999999;
 }
 
 .lead {
@@ -21,9 +22,13 @@
 }
 
 body {
-    background-color: rgb(19, 155, 109);
+    background-color: rgb(17, 145, 150);
 }
 
 h3 {
     font-family: 'Sigmar One', cursive;
+}
+
+#category, #show-info, .lead {
+    font-family: 'Roboto', sans-serif;
 }

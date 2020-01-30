@@ -74,7 +74,7 @@ $(document).ready(function() {
       infoContainer.empty();
       var messageH2 = $("<h2>");
       messageH2.css({ "text-align": "center", "margin-top": "50px" });
-      messageH2.html("No places yet for this category, click on the button above to add your favorite Burgers-n-Beer joint.");
+      messageH2.html("No places have been added, click on the button above to add your favorite Burgers-n-Beer joint.");
       infoContainer.append(messageH2);
     }
   
