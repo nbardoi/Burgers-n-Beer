@@ -1,12 +1,29 @@
 .jumbotron.jumbotron-fluid {
     width: 100%;
     margin: 0;
+    padding: 10px;
 }
 
 .lead {
     margin-top: 16px;
+    text-align: center;
 }
 
 .card {
     width: 100%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+body {
+    background-color: rgb(19, 155, 109);
+}
+
+h3 {
+    font-family: 'Sigmar One', cursive;
 }

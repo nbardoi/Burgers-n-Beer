@@ -17,3 +17,7 @@
     cursor: pointer;
     width: auto;
 }
+
+h3 {
+    font-family: 'Sigmar One', cursive;
+}
