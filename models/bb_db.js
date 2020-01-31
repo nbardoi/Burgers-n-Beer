@@ -32,9 +32,6 @@ module.exports = function(sequelize, DataTypes) {
       review: {
         type: DataTypes.TEXT,
         allowNull: false,
-        validate: {
-          len: [1, 250]
-        }
       }
     });
     return Resturants;
