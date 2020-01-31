@@ -13,7 +13,7 @@ $(document).ready(function() {
     $(add_newForm).on("submit", function handleFormSubmit(event) {
       event.preventDefault();
       // Wont submit the post if we are missing info
-      if (!nameInput.val()) {
+      if (!nameInput.val() || !timeInput.val() || !ratingInput.val() || !reviewInput.val()) {
         return;
       }
       // Constructing a newRest object to hand to the database
