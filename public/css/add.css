@@ -1,0 +1,27 @@
+#rest_btn{
+    background-color: rgb(17, 145, 150);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+#submit_btn {
+    background-color:rgb(17, 130, 130);
+    color: white;
+    padding: 7px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: auto;
+}
+
+h3 {
+    font-family: 'Sigmar One', cursive;
+}
+
+body {
+    background-color: #999999;
+}
